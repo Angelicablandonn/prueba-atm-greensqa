@@ -11,20 +11,23 @@ import net.serenitybdd.screenplay.targets.Target;
  */
 public class HomePage {
 
+    public static final Target TAB_VUELOS = Target.the("pestaña o enlace de vuelos")
+            .locatedBy("a[href*='oferta-vuelos'], button[data-testid='tab-flight'], #tabFlight, [data-testid='fsb-tab-flights']");
+
     public static final Target ACEPTAR_COOKIES = Target.the("botón aceptar cookies")
-            .locatedBy("#cookies-politics-button, button[data-testid='cookies-politics-button']");
+            .locatedBy("#cookies-politics-button, button[data-testid='cookies-politics-button'], #onetrust-accept-btn-handler");
 
     public static final Target TIPO_VIAJE_IDA_VUELTA = Target.the("opción ida y vuelta")
-            .locatedBy("//*[@data-testid='roundtrip-tab' or contains(.,'Ida y vuelta')][self::button or self::a or @role='tab']");
+            .locatedBy("//*[@data-testid='roundtrip-tab' or @data-testid='trip-type-selector-button-roundtrip' or contains(@aria-label,'Ida y vuelta') or contains(normalize-space(.),'Ida y vuelta')][self::button or self::a or @role='tab' or @role='button']");
 
     public static final Target TIPO_VIAJE_SOLO_IDA = Target.the("opción solo ida")
-            .locatedBy("//*[@data-testid='oneway-tab' or contains(.,'Solo ida')][self::button or self::a or @role='tab']");
+            .locatedBy("//*[@data-testid='oneway-tab' or @data-testid='trip-type-selector-button-oneway' or contains(@aria-label,'Solo ida') or contains(normalize-space(.),'Solo ida')][self::button or self::a or @role='tab' or @role='button']");
 
     public static final Target CAMPO_ORIGEN = Target.the("campo origen")
-            .locatedBy("#txtInputOrigin, input[data-testid='origin-input']");
+            .locatedBy("#origin-input, #txtInputOrigin, input[data-testid='origin-input'], input[name='origin']");
 
     public static final Target CAMPO_DESTINO = Target.the("campo destino")
-            .locatedBy("#txtInputDestination, input[data-testid='destination-input']");
+            .locatedBy("#destination-input, #txtInputDestination, input[data-testid='destination-input'], input[name='destination']");
 
     public static Target sugerenciaAutocompletar(String ciudad) {
         return Target.the("sugerencia " + ciudad)

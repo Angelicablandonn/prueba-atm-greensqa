@@ -105,9 +105,8 @@
                         <include>**/*TestSuite.java</include>
                         <include>**/CucumberTestSuite.java</include>
                     </includes>
-                    <!-- Ejecución en paralelo de escenarios -->
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
+                    <!-- Secuencial: evita múltiples sesiones Chrome contra anti-bot LATAM -->
+                    <parallel>none</parallel>
                 </configuration>
                 <executions>
                     <execution>

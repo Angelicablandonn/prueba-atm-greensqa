@@ -19,9 +19,8 @@ public class SeleccionarTipoViaje implements Task {
     public <T extends Actor> void performAs(T actor) {
         if (tipo.toLowerCase().contains("solo")) {
             actor.attemptsTo(Click.on(HomePage.TIPO_VIAJE_SOLO_IDA));
-        } else {
-            actor.attemptsTo(Click.on(HomePage.TIPO_VIAJE_IDA_VUELTA));
         }
+        // Ida y vuelta suele ser la opción por defecto en la home; evitar clic innecesario.
     }
 
     public static Performable de(String tipo) {

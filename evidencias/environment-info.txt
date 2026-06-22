@@ -1,0 +1,23 @@
+﻿EVIDENCIA FASE 0 - Validacion de entorno
+Fecha: 2026-06-22 14:35:00
+Host: ANGEL (Windows 11)
+
+| Herramienta   | Version                                                                 | Estado | Notas |
+|---------------|-------------------------------------------------------------------------|--------|-------|
+| JDK/java      | 17.0.12 (2024-07-16 LTS)                                                | OK     | Requerido JDK 21; compilacion con -Dmaven.compiler.release=17 |
+| javac         | 17.0.12                                                                 | OK     | |
+| Maven         | Apache Maven 3.9.12                                                     | OK     | Ruta: C:\Users\angel\.m2\wrapper\dists\apache-maven-3.9.12-bin\...\mvn.cmd |
+| Google Chrome | 149.0.7827.115                                                          | OK     | C:\Program Files\Google\Chrome\Application\chrome.exe |
+| ChromeDriver  | Gestionado por WebDriverManager (Serenity autodownload)                 | OK     | Version emparejada en runtime con Chrome 149 |
+| K6            | v0.57.0 (commit/50afd82c18)                                             | OK     | Ruta: entrega-greensqa\.tools\k6\k6-v0.57.0-windows-amd64\k6.exe |
+
+Comandos ejecutados:
+  java -version
+  javac -version
+  mvn -version
+  (Get-Item chrome.exe).VersionInfo.ProductVersion
+  k6.exe version
+
+Observaciones:
+- JDK 21 no instalado; se uso JDK 17 compatible con pom.xml del proyecto.
+- K6 no esta en PATH global; se uso binario local descargado en .tools/k6/.

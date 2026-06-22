@@ -39,7 +39,6 @@ public class BusquedaVuelosStepDefinitions {
     }
 
     @Cuando("selecciona el tipo de viaje {string}")
-    @Y("selecciona el tipo de viaje {string}")
     public void seleccionaTipoViaje(String tipo) {
         OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarTipoViaje.de(tipo));
     }

@@ -1,0 +1,12 @@
+﻿EVIDENCIA FASE 1.5 - Validacion CSV
+Fecha: 2026-06-22 13:26:53
+Archivo: c:\Users\angel\Downloads\entrega-greensqa\entrega-greensqa\01-prueba-atm\latam-qa-poc\data-generator\output\datos_actual.csv
+Origen ultima generacion: datos_20260622_132612.csv
+
+Filas de datos: 500
+Columnas: apellido, ciudad, documento, edad, idioma, nombre, pais, tipo
+Columnas esperadas: tipo,nombre,apellido,edad,documento,ciudad,pais,idioma
+Columnas OK: SI
+Documentos duplicados: 0
+Combinaciones nombre+apellido duplicadas: 0
+Resultado: VALIDO
