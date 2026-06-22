@@ -1,0 +1,23 @@
+# Build
+target/
+*.class
+# DB y salidas generadas
+data/
+*.db
+*.db-wal
+*.db-shm
+output/
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+# OS
+.DS_Store
+# Serenity
+site/
+# JVM crash logs
+hs_err_pid*.log
+replay_pid*.log
